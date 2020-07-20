@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<B>WRITER</B>: {{object.writer}} on {{object.date_posted}}<br>
+<B>TITLE</B>:{{object.title}}<br>
+
+<B>CONTENT</B>: {{object.content}}<br>
+<a href="/delete/{{object.id}}">delete</a>
+<a href="/edit/{{object.id}}">edit</a>
+<hr>
+{% endblock %}

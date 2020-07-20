@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if messages %}
+ {% for k in messages %}
+ {{k}}
+ {% endfor %}
+{% endif %}
+
+{% if sr %}
+        {% for item in sr %}
+            {{item.title}}<br>
+            {{item.writer}}<br>
+            {{item.content}}<br>
+        <hr>
+        {% endfor %}
+{% endif %}
+
+{% endblock %}

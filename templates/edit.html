@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/edit/{{data.id}}" method="POST">
+    {% csrf_token %}
+
+    TITLE:<input type="text" name='title' value="{{data.title}}"><br>
+    WRITER<input type="text" name="writer" value="{{data.writer}}"><br>
+    CONTENT:<input type="text" name="content" value="{{data.content}}"><br>
+    <input type="submit">
+
+    
+</form>
+
+{% endblock %}

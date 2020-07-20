@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/create" method="POST">
+    {% csrf_token %}
+
+    TITLE:<input type="text" name='title' ><br>
+    WRITER<input type="text" name="writer" placeholder="writer" value="{{user.username}}" hidden><br>
+    CONTENT:<input type="text" name="content" ><br>
+    <input type="submit">
+
+    
+</form>
+
+{% endblock %}
